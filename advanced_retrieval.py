@@ -53,9 +53,6 @@ for j in range(min(3, len(sorted_docs))):
     print(f"\n[Rank {j+1}] RRF Score: {score:.4f}")
     print(f"Text: {metin[:200]}...") 
 
-# --- ÜST KISIM AYNI ---
-
-# Soruyu bir değişkene atıyoruz ki aşağıda da kullanabilelim
 original_query = "Go dilindeki arayüzler, diğer dillerdeki regresyon testlerini nasıl etkiler?"
 
 messages = [
