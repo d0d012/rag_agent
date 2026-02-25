@@ -1,0 +1,16 @@
+# Modern Yazılım Geliştirme ve Test Metodolojileri Rehberi
+
+## Bölüm 1: Go Dilinde Struct (Yapı) Kullanımı
+Go (Golang) programlama dilinde nesne yönelimli programlamadaki (OOP) 'sınıf' (class) kavramı doğrudan bulunmaz. Bunun yerine verileri gruplamak ve modellemek için 'Struct' (yapı) kullanılır. Bir struct, farklı veri tiplerindeki alanları (fields) tek bir çatı altında toplayan özel bir veri tipidir. Örneğin, bir veritabanı kaydını veya bir API isteğini modellemek için struct'lar idealdir. Bellek yönetimi açısından oldukça verimlidirler ve değer (value) veya referans (pointer) olarak fonksiyonlara geçirilebilirler.
+
+## Bölüm 2: Interface (Arayüz) Mantığı ve Polimorfizm
+Go dilinde interface'ler (arayüzler), bir tipin hangi metodlara sahip olması gerektiğini tanımlayan sözleşmelerdir. Diğer dillerin aksine (örneğin Java), Go'da bir struct'ın bir interface'i uyguladığını (implement ettiğini) açıkça belirtmenize gerek yoktur. Eğer bir struct, interface içinde tanımlanan tüm metodları barındırıyorsa, o interface'i dolaylı olarak (implicitly) uygulamış sayılır. Bu özellik, esnek ve gevşek bağlı (loosely coupled) mimariler kurmayı çok kolaylaştırır.
+
+## Bölüm 3: Yazılım Test Seviyeleri
+Geliştirilen yazılımların kalitesini garanti altına almak için çeşitli test metodolojileri uygulanır.
+Smoke Testing (Duman Testi): Yeni bir yazılım derlemesinin (build) temel ve en kritik fonksiyonlarının çalışıp çalışmadığını kontrol eder. Sistem genel olarak ayakta mı sorusuna cevap arar; çok derine inmez.
+Sanity Testing (Sağlamlık Testi): Genellikle ufak bir kod değişikliği veya hata düzeltmesi (bug fix) sonrası, sadece o spesifik modülün doğru çalışıp çalışmadığını detaylıca test eder.
+Regression Testing (Regresyon Testi): Koda eklenen yeni bir özelliğin, sistemin önceden çalışan eski kısımlarını bozup bozmadığını kontrol etmek için yapılan kapsamlı testlerdir.
+
+## Bölüm 4: Otomasyon ve UI Testleri
+Arka uç (backend) servisleri birim (unit) testlerle kontrol edilirken, kullanıcı arayüzü (UI) tarafındaki süreçler genellikle Selenium gibi otomasyon araçlarıyla test edilir. Selenium, web tarayıcılarını programatik olarak kontrol etmeye yarar ve bir kullanıcının sisteme giriş yapması, form doldurması gibi uçtan uca (End-to-End) senaryolarını simüle eder.
